@@ -46,7 +46,6 @@ Immediate Generator
 To test the instructions implemented and debug the design the following assembly code has been written in [Ripes](https://github.com/mortbopet/Ripes), getting also the disassembly version of the code:
 
 ~~~assembly
-```
 #Logisim Tests
 
 .text
@@ -66,7 +65,6 @@ main:
 EQUAL:
     and a3, a3, a2 #1 AND 5 = 1
     or a4, a3, a2 #1 OR 5 = 5
-```
 ~~~
 
 ![Test Disassembly](images/testdisassembly.jpg?raw=true "Test Disassembly")
