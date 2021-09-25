@@ -1,11 +1,5 @@
 #Logisim Tests
 
-
-
-
-#Code section - Machine code - Text
-#Defined by Program Counter(pc)
-#Grows UPWARDS (?)
 .text
 main:
     lw a0, 0 (a0)
@@ -23,5 +17,3 @@ main:
 EQUAL:
     and a3, a3, a2 #1 AND 5 = 1
     or a4, a3, a2 #1 OR 5 = 5
-    
-    
