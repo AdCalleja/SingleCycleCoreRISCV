@@ -36,6 +36,16 @@ Main Control
 
 ALU Control
 
+| Instruction Format | Instruction | Desired ALU action | ALUOp1 | ALUOp0 | I\[30\] | I\[14\] | I\[13\] | I\[12\] | AluCtrl |
+| ------------------ | ----------- | ------------------ | ------ | ------ | ------- | ------- | ------- | ------- | ------- |
+| I                  | lw          | add                | 0      | 0      | x       | x       | x       | x       | 0010    |
+| S                  | sw          | add                | 0      | 0      | x       | x       | x       | x       | 0010    |
+| B                  | beq         | substract          | 0      | 1      | x       | x       | x       | x       | 0110    |
+| R                  | add         | add                | 1      | 0      | 0       | 0       | 0       | 0       | 0010    |
+| R                  | sub         | substract          | 1      | 0      | 1       | 0       | 0       | 0       | 0110    |
+| R                  | and         | AND                | 1      | 0      | 0       | 1       | 1       | 1       | 0000    |
+| R                  | or          | OR                 | 1      | 0      | 0       | 1       | 1       | 0       | 0001    |
+
 ![ALU Control Diagram](images/alucontrol.jpg?raw=true "ALU Control Diagram")
 
 Immediate Generator
