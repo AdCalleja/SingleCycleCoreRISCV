@@ -2,13 +2,14 @@
 module RegisterFile(
     input           clk,
     input           rst,    //! High level synchronous reset
-    input [31:0]    WriteData,
     input [4:0]     WriteDir,
     input           WriteEn,
-    output [31:0]    ReadData1,
-    output [31:0]    ReadData2,
+    input [31:0]    WriteData,
     input [4:0]     ReadDir1,
-    input [4:0]     ReadDir2
+    input [4:0]     ReadDir2,
+    output [31:0]    ReadData1,
+    output [31:0]    ReadData2
+    
 );
 
 
@@ -31,7 +32,7 @@ always @(posedge clk) begin : WriteBank
     end
 end
 
-//Read
+//! Read the register bank
 assign ReadData1 = bank[ReadDir1];
 assign ReadData2 = bank[ReadDir2];
 
