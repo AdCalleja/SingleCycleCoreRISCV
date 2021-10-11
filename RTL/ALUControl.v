@@ -16,7 +16,8 @@ module ALUControl(
     input [2:0]     Func3,  //! From instruction
     output reg [3:0]    ALUCtrl
 );
-
+wire [3:0] Func;
+assign Func = {Func7,Func3};
 always@(*)begin : AluControl
     case(ALUOp)
     //Addition
@@ -25,7 +26,7 @@ always@(*)begin : AluControl
     4'b01:  ALUCtrl <= 4'b0110;
     //To be Determined
     4'b10:  begin
-        case(Func7&Func3)
+        case(Func)
             4'b0000: ALUCtrl <= 4'b0010;    //add
             4'b1000: ALUCtrl <= 4'b0110;    //sub
             4'b0111: ALUCtrl <= 4'b0000;    //and

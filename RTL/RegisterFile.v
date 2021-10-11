@@ -14,21 +14,21 @@ module RegisterFile(
 
 
 reg [31:0]  bank [31:0];    //! Internal memory state of the registers
-integer i;  //! Index to reset *multidimensional* bank
+//integer i;  //! Index to reset *multidimensional* bank
 
 //! Write the register bank (except zero) if enabled
 always @(posedge clk) begin : WriteBank
     if (rst == 0) begin
-        if (WriteEn) begin
-            if(WriteDir!=0)begin
+        if (WriteEn == 1) begin
+            if(WriteDir != 0)begin
                 bank[WriteDir] <= WriteData;
             end 
         end
-    else
-        for (i=0; i<8; i++)
-        begin
-            bank[i] <= 0;
-        end
+    // else
+    //     for (i=0; i<32; i++)
+    //     begin
+    //         bank[i] <= 0;
+    //     end
     end
 end
 

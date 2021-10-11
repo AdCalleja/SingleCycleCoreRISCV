@@ -1,0 +1,4 @@
+#GitIgnore files of Vivado, which should be recreated using the tcl script located in HDL.
+#More info: https://www.fpgadeveloper.com/2014/08/version-control-for-vivado-projects.html/
+Vivado/
+
