@@ -21,20 +21,20 @@ assign Func = {Func7,Func3};
 always@(*)begin : AluControl
     case(ALUOp)
     //Addition
-    4'b00:  ALUCtrl <= 4'b0010;
+    2'b00:  ALUCtrl = 4'b0010;
     //Substraction
-    4'b01:  ALUCtrl <= 4'b0110;
+    2'b01:  ALUCtrl = 4'b0110;
     //To be Determined
-    4'b10:  begin
+    2'b10:  begin
         case(Func)
-            4'b0000: ALUCtrl <= 4'b0010;    //add
-            4'b1000: ALUCtrl <= 4'b0110;    //sub
-            4'b0111: ALUCtrl <= 4'b0000;    //and
-            4'b0110: ALUCtrl <= 4'b0001;    //or
-            default: ALUCtrl <= 4'b0000;
+            4'b0000: ALUCtrl = 4'b0010;    //add
+            4'b1000: ALUCtrl = 4'b0110;    //sub
+            4'b0111: ALUCtrl = 4'b0000;    //and
+            4'b0110: ALUCtrl = 4'b0001;    //or
+            default: ALUCtrl = 4'b0000;
         endcase
     end
-    default: ALUCtrl <= 4'b0000;
+    default: ALUCtrl = 4'b0000;
     //0'b11 not used
     endcase
 end

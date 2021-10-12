@@ -18,7 +18,7 @@ set_io --warn-no-port leds[6] 38  # output
 set_io --warn-no-port leds[7] 37  # output
 
 # ------------ User push buttons ----------------------------------------------
-set_io --warn-no-port clk 34  # input
+set_io --warn-no-port btn 34  # input
 set_io --warn-no-port rst 33  # input
 
 # ------------ 5v Digital I/O -------------------------------------------------
@@ -77,7 +77,7 @@ set_io --warn-no-port rst 33  # input
 #set_io --warn-no-port ADC_INT 90  # input
 
 # -------------------------- SYSTEM CLOCK -------------------------------------
-#set_io --warn-no-port clk 49  # input
+set_io --warn-no-port original_clk 49  # input
 
 # -------------------------- FTDI ---------------------------------------------
 # --- FTDI 0:

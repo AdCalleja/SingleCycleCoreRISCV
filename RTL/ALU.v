@@ -22,5 +22,3 @@ end
 assign ALUZero = (Result==0);
 
 endmodule
-
-

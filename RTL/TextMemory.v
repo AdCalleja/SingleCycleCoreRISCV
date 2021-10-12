@@ -1,4 +1,4 @@
-module TextMemoryROM #(
+module TextMemory #(
   parameter DATA_WIDTH=32,          //width of data bus
   parameter ADDR_WIDTH=8           //width of addresses buses
 )(
@@ -12,15 +12,18 @@ module TextMemoryROM #(
 always@(*)
 begin
     case(addr)
-        0: data_out <= 32'h00052503;
-        4: data_out <= 32'h0085a583;
-        8: data_out <= 32'h00a58633;
-        12: data_out <= 32'h00c2a423;
-        16: data_out <= 32'h02b60063;
-        20: data_out <= 32'h40b606b3;
-        24: data_out <= 32'h40d60633;
-        28: data_out <= 32'h00b60a63;
-        default: data_out <= 32'h00000000;
+        0: data_out = 32'h00052503;
+        1: data_out = 32'h0085a583;
+        2: data_out = 32'h00a58633;
+        3: data_out = 32'h00c2a423;
+        4: data_out = 32'h02b60063;
+        5: data_out = 32'h40b606b3;
+        6: data_out = 32'h40d60633;
+        7: data_out = 32'h00b60a63;
+        'h0C: data_out = 32'h00c6f6b3;
+        'h0D: data_out = 32'h00c6e733;
+
+        default: data_out = 32'h00000000;
     endcase
 end
 
