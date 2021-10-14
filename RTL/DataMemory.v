@@ -1,6 +1,6 @@
 module DataMemory #(
   parameter DATA_WIDTH=32,          //width of data bus
-  parameter ADDR_WIDTH=8           //width of addresses buses
+  parameter ADDR_WIDTH=4           //width of addresses buses
 )(
   input                     clk,   //clock signal
   input  [(DATA_WIDTH-1):0] data_in,  //data to be written
@@ -11,20 +11,20 @@ module DataMemory #(
 );
 
   reg [DATA_WIDTH-1:0] ram [2**ADDR_WIDTH-1:0]; //Depth = [2**ADDR_WIDTH-1:0]
-  reg [ADDR_WIDTH-1:0] addr_r;
+  //reg [ADDR_WIDTH-1:0] addr_r;
 
   //Initializa RAM
   initial begin
-    $readmemh("datamemoryverilog", ram);
+    $readmemh("/home/adrian/codigo/RISC-V/SingleCycleCoreRISCV/RTL/datamemoryverilog.txt", ram);
   end
 
   always @(posedge clk) begin //WRITE
       if (we) begin
           ram[addr] <= data_in;
       end
-      addr_r <= addr;
+      //addr_r <= addr;
   end
 
-  assign data_out = re ? ram[addr_r] : 0; //READ
+  assign data_out = re ? ram[addr] : 0; //READ
 
 endmodule

@@ -111,7 +111,7 @@ ALU ALUSCC(
 DataMemory DataMemorySCC(
         .clk(clk),
         .data_in(ReadData2),
-        .addr(ALUOutput[9:2]),
+        .addr(ALUOutput[5:2]),
         .we(MemWrite),
         .re(MemRead),
         .data_out(DataOutput));
@@ -140,13 +140,13 @@ ALUControl AluControlSCC(
     .Func3(Instruction[14:12]), 
     .ALUCtrl(ALUCtrl));
 
-assign leds[0] = ALUOutput[0] | ALUOutput[8] | ALUOutput[16] | ALUOutput[24]; 
-assign leds[1] = ALUOutput[1] | ALUOutput[9] | ALUOutput[17] | ALUOutput[25];
-assign leds[2] = ALUOutput[2] | ALUOutput[10] | ALUOutput[18] | ALUOutput[26];
-assign leds[3] = ALUOutput[3] | ALUOutput[11] | ALUOutput[19] | ALUOutput[27];
-assign leds[4] = ALUOutput[4] | ALUOutput[12] | ALUOutput[20] | ALUOutput[28];
-assign leds[5] = ALUOutput[5] | ALUOutput[13] | ALUOutput[21] | ALUOutput[29];
-assign leds[6] = ALUOutput[6] | ALUOutput[14] | ALUOutput[22] | ALUOutput[30];
-assign leds[7] = ALUOutput[7] | ALUOutput[15] | ALUOutput[23] | ALUOutput[31];
+assign leds[0] = rd[0] | rd[8] | rd[16] | rd[24]; 
+assign leds[1] = rd[1] | rd[9] | rd[17] | rd[25];
+assign leds[2] = rd[2] | rd[10] | rd[18] | rd[26];
+assign leds[3] = rd[3] | rd[11] | rd[19] | rd[27];
+assign leds[4] = rd[4] | rd[12] | rd[20] | rd[28];
+assign leds[5] = rd[5] | rd[13] | rd[21] | rd[29];
+assign leds[6] = rd[6] | rd[14] | rd[22] | rd[30];
+assign leds[7] = rd[7] | rd[15] | rd[23] | rd[31];
 
 endmodule

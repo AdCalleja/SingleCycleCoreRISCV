@@ -1,5 +1,5 @@
 //Button Clock Debouncer
-module Debouncer(input clk, input btn,output btn_out);
+module Debouncer(input clk, input btn, output btn_out);
     wire slow_clk_en;
     wire Q1,Q2,Q2_bar,Q0;
 

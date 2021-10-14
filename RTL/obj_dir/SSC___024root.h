@@ -17,19 +17,17 @@ VL_MODULE(SSC___024root) {
     VL_IN8(rst,0,0);
     VL_IN8(btn,0,0);
     VL_OUT8(leds,7,0);
-    CData/*0:0*/ SingleCycleCore__DOT__MemtoReg;
     CData/*0:0*/ SingleCycleCore__DOT__RegWrite;
-    CData/*0:0*/ SingleCycleCore__DOT__MemRead;
     CData/*0:0*/ SingleCycleCore__DOT__MemWrite;
     CData/*0:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__Q1;
     CData/*0:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__Q2;
     CData/*0:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__Q0;
-    CData/*7:0*/ SingleCycleCore__DOT__DataMemorySCC__DOT__addr_r;
     CData/*0:0*/ __Vclklast__TOP__original_clk;
     CData/*0:0*/ __Vclklast__TOP__SingleCycleCore__DOT__clk;
     IData/*31:0*/ SingleCycleCore__DOT__Instruction;
     IData/*31:0*/ SingleCycleCore__DOT__ReadData2;
     IData/*31:0*/ SingleCycleCore__DOT__ALUOutput;
+    IData/*31:0*/ SingleCycleCore__DOT__rd;
     IData/*31:0*/ SingleCycleCore__DOT__Immediate;
     IData/*31:0*/ SingleCycleCore__DOT__PCNext;
     IData/*31:0*/ SingleCycleCore__DOT__PCtemp;
@@ -40,7 +38,7 @@ VL_MODULE(SSC___024root) {
     IData/*31:0*/ SingleCycleCore__DOT__ImmGenSCC__DOT__Jimm;
     IData/*31:0*/ SingleCycleCore__DOT__ImmGenSCC__DOT__Iimm;
     VlUnpacked<IData/*31:0*/, 32> SingleCycleCore__DOT__RegisterFileSCC__DOT__bank;
-    VlUnpacked<IData/*31:0*/, 256> SingleCycleCore__DOT__DataMemorySCC__DOT__ram;
+    VlUnpacked<IData/*31:0*/, 4> SingleCycleCore__DOT__DataMemorySCC__DOT__ram;
 
     // INTERNAL VARIABLES
     SSC__Syms* vlSymsp;  // Symbol table

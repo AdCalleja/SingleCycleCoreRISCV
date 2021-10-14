@@ -39,7 +39,7 @@ always@(*)begin : FormatSelect
         Immediate = Jimm;
     end
     0,3,4,25,28: begin
-        Iimm = {{21{Instruction[31]}}, Instruction[30:20]};
+        Iimm = {{20{Instruction[31]}}, Instruction[31:20]};
         Immediate = Iimm;
     end
     default: Immediate = 0;
