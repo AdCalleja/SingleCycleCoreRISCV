@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SingleCycleCore_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SingleCycleCore_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="41,738.500000 us"></ZoomStartTime>
+      <ZoomEndTime time="45,653.500001 us"></ZoomEndTime>
+      <Cursor1Time time="45,001.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="240"></NameColumnWidth>
+      <ValueColumnWidth column_width="193"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/original_clk">
+      <obj_property name="ElementShortName">original_clk</obj_property>
+      <obj_property name="ObjectShortName">original_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/TextMemorySCC/data_out">
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/PC">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/PCPlus4">
+      <obj_property name="ElementShortName">PCPlus4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCPlus4[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/PCBranch">
+      <obj_property name="ElementShortName">PCBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCBranch[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/PCNext">
+      <obj_property name="ElementShortName">PCNext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCNext[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/ALUSCC/ALUZero">
+      <obj_property name="ElementShortName">ALUZero</obj_property>
+      <obj_property name="ObjectShortName">ALUZero</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/MainControlSCC/Branch">
+      <obj_property name="ElementShortName">Branch</obj_property>
+      <obj_property name="ObjectShortName">Branch</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/Instruction">
+      <obj_property name="ElementShortName">Instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/ReadData1">
+      <obj_property name="ElementShortName">ReadData1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadData1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/ReadData2">
+      <obj_property name="ElementShortName">ReadData2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadData2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/rs1">
+      <obj_property name="ElementShortName">rs1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/rs2">
+      <obj_property name="ElementShortName">rs2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/Immediate">
+      <obj_property name="ElementShortName">Immediate[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Immediate[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/ALUSrc">
+      <obj_property name="ElementShortName">ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/ALUZero">
+      <obj_property name="ElementShortName">ALUZero</obj_property>
+      <obj_property name="ObjectShortName">ALUZero</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/ALUOutput">
+      <obj_property name="ElementShortName">ALUOutput[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOutput[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/MemWrite">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/MemRead">
+      <obj_property name="ElementShortName">MemRead</obj_property>
+      <obj_property name="ObjectShortName">MemRead</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/DataOutput">
+      <obj_property name="ElementShortName">DataOutput[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOutput[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/MemtoReg">
+      <obj_property name="ElementShortName">MemtoReg</obj_property>
+      <obj_property name="ObjectShortName">MemtoReg</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/rd">
+      <obj_property name="ElementShortName">rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SingleCycleCore_tb/U0/RegWrite">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/leds">
+      <obj_property name="ElementShortName">leds[7:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/ALUOp">
+      <obj_property name="ElementShortName">ALUOp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/ALUCtrl">
+      <obj_property name="ElementShortName">ALUCtrl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUCtrl[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/RegisterFileSCC/ReadDir1">
+      <obj_property name="ElementShortName">ReadDir1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadDir1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SingleCycleCore_tb/U0/RegisterFileSCC/ReadDir2">
+      <obj_property name="ElementShortName">ReadDir2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadDir2[4:0]</obj_property>
+   </wvobject>
+</wave_config>
