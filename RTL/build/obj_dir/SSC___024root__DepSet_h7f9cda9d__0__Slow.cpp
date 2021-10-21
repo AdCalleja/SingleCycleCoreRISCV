@@ -16,10 +16,6 @@ VL_ATTR_COLD void SSC___024root___initial__TOP__1(SSC___024root* vlSelf) {
     VL_READMEM_N(true, 32, 16, 0, VL_CVT_PACK_STR_NW(20, SSC__ConstPool__CONST_h64bd582e_0)
                  ,  &(vlSelf->SingleCycleCore__DOT__DataMemorySCC__DOT__ram)
                  , 0, ~0ULL);
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q2 = 0U;
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q1 = 0U;
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q0 = 0U;
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter = 0U;
 }
 
 extern const VlUnpacked<IData/*31:0*/, 256> SSC__ConstPool__TABLE_h13652dff_0;
@@ -52,8 +48,6 @@ VL_ATTR_COLD void SSC___024root___settle__TOP__3(SSC___024root* vlSelf) {
                              >> 2U));
     vlSelf->SingleCycleCore__DOT__Instruction = SSC__ConstPool__TABLE_h13652dff_0
         [__Vtableidx1];
-    vlSelf->SingleCycleCore__DOT__clk = ((IData)(vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q1) 
-                                         & (~ (IData)(vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q2)));
     vlSelf->SingleCycleCore__DOT__ReadData2 = vlSelf->SingleCycleCore__DOT__RegisterFileSCC__DOT__bank
         [(0x1fU & (vlSelf->SingleCycleCore__DOT__Instruction 
                    >> 0x14U))];
@@ -233,8 +227,6 @@ VL_ATTR_COLD void SSC___024root___eval_initial(SSC___024root* vlSelf) {
     // Body
     SSC___024root___initial__TOP__1(vlSelf);
     vlSelf->__Vclklast__TOP__original_clk = vlSelf->original_clk;
-    vlSelf->__Vclklast__TOP__SingleCycleCore__DOT__clk 
-        = vlSelf->SingleCycleCore__DOT__clk;
 }
 
 VL_ATTR_COLD void SSC___024root___eval_settle(SSC___024root* vlSelf) {
@@ -258,7 +250,6 @@ VL_ATTR_COLD void SSC___024root___ctor_var_reset(SSC___024root* vlSelf) {
     // Body
     vlSelf->original_clk = VL_RAND_RESET_I(1);
     vlSelf->rst = VL_RAND_RESET_I(1);
-    vlSelf->btn = VL_RAND_RESET_I(1);
     vlSelf->leds = VL_RAND_RESET_I(8);
     vlSelf->SingleCycleCore__DOT__Instruction = VL_RAND_RESET_I(32);
     vlSelf->SingleCycleCore__DOT__ReadData2 = VL_RAND_RESET_I(32);
@@ -268,12 +259,7 @@ VL_ATTR_COLD void SSC___024root___ctor_var_reset(SSC___024root* vlSelf) {
     vlSelf->SingleCycleCore__DOT__PCNext = VL_RAND_RESET_I(32);
     vlSelf->SingleCycleCore__DOT__RegWrite = VL_RAND_RESET_I(1);
     vlSelf->SingleCycleCore__DOT__MemWrite = VL_RAND_RESET_I(1);
-    vlSelf->SingleCycleCore__DOT__clk = VL_RAND_RESET_I(1);
     vlSelf->SingleCycleCore__DOT__PCtemp = VL_RAND_RESET_I(32);
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q1 = VL_RAND_RESET_I(1);
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q2 = VL_RAND_RESET_I(1);
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q0 = VL_RAND_RESET_I(1);
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter = VL_RAND_RESET_I(27);
     for (int __Vi0=0; __Vi0<32; ++__Vi0) {
         vlSelf->SingleCycleCore__DOT__RegisterFileSCC__DOT__bank[__Vi0] = VL_RAND_RESET_I(32);
     }

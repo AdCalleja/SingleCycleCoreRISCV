@@ -1,4 +1,3 @@
-//`include "/home/adrian/codigo/RISC-V/SingleCycleCoreRISCV/RTL/ALU.v"
 `include "ALU.v"
 `include "ALUControl.v"
 `include "DataMemory.v"
@@ -7,14 +6,23 @@
 `include "RegisterFile.v"
 `include "TextMemory.v"
 //Debouncer
-`include "Debouncer.v"
+`ifdef BUTTON
+    `include "Debouncer.v"
+`endif
+//SlowClock
+`ifdef SLOWCLK
+    `include "SlowClock.v"
+`endif
+
 
 //! Simple Single Cycle RISC-V core with the following instrucions implemented:
 //! lw, sw, beq, add, subb, and, or.
 module SingleCycleCore(
     input   original_clk,
     input   rst,
+`ifdef BUTTON
     input   btn,
+`endif
     output [7:0] leds     //! Onboard Leds to Debug.
 );
 
@@ -49,9 +57,16 @@ wire Branch;                //! Select new branching program counter (if ALU als
 wire [1:0]  ALUOp;          //! Previous instruction decodification to simplify ALUControl.
 wire [3:0]  ALUCtrl;        //! ALU operation selected from ALU control
 
-//Button Clock Debouncer
+//Clock source
 wire clk;
-Debouncer DebouncerSSC(.clk(original_clk), .btn(btn), .btn_out(clk));
+
+`ifdef BUTTON
+    Debouncer DebouncerSSC(.clk(original_clk), .btn(btn), .btn_out(clk));
+`elsif SLOWCLK
+     SlowClock SlowClockSCC(.clk(original_clk), .slow_clk(clk));
+`else
+    assign clk = original_clk;
+`endif
 
 //  --DATAPATH--
 

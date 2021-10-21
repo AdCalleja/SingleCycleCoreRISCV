@@ -6,32 +6,6 @@
 
 #include "SSC___024root.h"
 
-VL_INLINE_OPT void SSC___024root___sequent__TOP__2(SSC___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    SSC__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    SSC___024root___sequent__TOP__2\n"); );
-    // Init
-    IData/*26:0*/ __Vdly__SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter;
-    // Body
-    __Vdly__SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter 
-        = vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter;
-    __Vdly__SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter 
-        = ((0x752fU <= vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter)
-            ? 0U : (0x7ffffffU & ((IData)(1U) + vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter)));
-    if ((0x752fU == vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter)) {
-        vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q2 
-            = vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q1;
-        vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q1 
-            = vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q0;
-        vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q0 
-            = vlSelf->btn;
-    }
-    vlSelf->SingleCycleCore__DOT__clk = ((IData)(vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q1) 
-                                         & (~ (IData)(vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__Q2)));
-    vlSelf->SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter 
-        = __Vdly__SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter;
-}
-
 extern const VlUnpacked<IData/*31:0*/, 256> SSC__ConstPool__TABLE_h13652dff_0;
 extern const VlUnpacked<CData/*0:0*/, 128> SSC__ConstPool__TABLE_hdba709b1_0;
 extern const VlUnpacked<CData/*0:0*/, 128> SSC__ConstPool__TABLE_h74f58f08_0;
@@ -41,10 +15,10 @@ extern const VlUnpacked<CData/*0:0*/, 128> SSC__ConstPool__TABLE_h891bc50c_0;
 extern const VlUnpacked<CData/*1:0*/, 128> SSC__ConstPool__TABLE_hb121e016_0;
 extern const VlUnpacked<CData/*3:0*/, 64> SSC__ConstPool__TABLE_h8d41ffe0_0;
 
-VL_INLINE_OPT void SSC___024root___sequent__TOP__4(SSC___024root* vlSelf) {
+VL_INLINE_OPT void SSC___024root___sequent__TOP__2(SSC___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     SSC__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    SSC___024root___sequent__TOP__4\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    SSC___024root___sequent__TOP__2\n"); );
     // Init
     IData/*31:0*/ SingleCycleCore__DOT__rs2;
     CData/*0:0*/ SingleCycleCore__DOT__ALUSrc;
@@ -319,14 +293,8 @@ void SSC___024root___eval(SSC___024root* vlSelf) {
     if (((IData)(vlSelf->original_clk) & (~ (IData)(vlSelf->__Vclklast__TOP__original_clk)))) {
         SSC___024root___sequent__TOP__2(vlSelf);
     }
-    if (((IData)(vlSelf->SingleCycleCore__DOT__clk) 
-         & (~ (IData)(vlSelf->__Vclklast__TOP__SingleCycleCore__DOT__clk)))) {
-        SSC___024root___sequent__TOP__4(vlSelf);
-    }
     // Final
     vlSelf->__Vclklast__TOP__original_clk = vlSelf->original_clk;
-    vlSelf->__Vclklast__TOP__SingleCycleCore__DOT__clk 
-        = vlSelf->SingleCycleCore__DOT__clk;
 }
 
 #ifdef VL_DEBUG
@@ -339,7 +307,5 @@ void SSC___024root___eval_debug_assertions(SSC___024root* vlSelf) {
         Verilated::overWidthError("original_clk");}
     if (VL_UNLIKELY((vlSelf->rst & 0xfeU))) {
         Verilated::overWidthError("rst");}
-    if (VL_UNLIKELY((vlSelf->btn & 0xfeU))) {
-        Verilated::overWidthError("btn");}
 }
 #endif  // VL_DEBUG

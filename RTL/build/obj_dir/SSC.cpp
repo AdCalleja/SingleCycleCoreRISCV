@@ -11,7 +11,6 @@ SSC::SSC(VerilatedContext* _vcontextp__, const char* _vcname__)
     : vlSymsp{new SSC__Syms(_vcontextp__, _vcname__, this)}
     , original_clk{vlSymsp->TOP.original_clk}
     , rst{vlSymsp->TOP.rst}
-    , btn{vlSymsp->TOP.btn}
     , leds{vlSymsp->TOP.leds}
     , rootp{&(vlSymsp->TOP)}
 {

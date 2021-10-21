@@ -13,17 +13,11 @@ VL_MODULE(SSC___024root) {
 
     // DESIGN SPECIFIC STATE
     VL_IN8(original_clk,0,0);
-    CData/*0:0*/ SingleCycleCore__DOT__clk;
     VL_IN8(rst,0,0);
-    VL_IN8(btn,0,0);
     VL_OUT8(leds,7,0);
     CData/*0:0*/ SingleCycleCore__DOT__RegWrite;
     CData/*0:0*/ SingleCycleCore__DOT__MemWrite;
-    CData/*0:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__Q1;
-    CData/*0:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__Q2;
-    CData/*0:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__Q0;
     CData/*0:0*/ __Vclklast__TOP__original_clk;
-    CData/*0:0*/ __Vclklast__TOP__SingleCycleCore__DOT__clk;
     IData/*31:0*/ SingleCycleCore__DOT__Instruction;
     IData/*31:0*/ SingleCycleCore__DOT__ReadData2;
     IData/*31:0*/ SingleCycleCore__DOT__ALUOutput;
@@ -31,7 +25,6 @@ VL_MODULE(SSC___024root) {
     IData/*31:0*/ SingleCycleCore__DOT__Immediate;
     IData/*31:0*/ SingleCycleCore__DOT__PCNext;
     IData/*31:0*/ SingleCycleCore__DOT__PCtemp;
-    IData/*26:0*/ SingleCycleCore__DOT__DebouncerSSC__DOT__clock_enable1__DOT__counter;
     IData/*31:0*/ SingleCycleCore__DOT__ImmGenSCC__DOT__Simm;
     IData/*31:0*/ SingleCycleCore__DOT__ImmGenSCC__DOT__Bimm;
     IData/*31:0*/ SingleCycleCore__DOT__ImmGenSCC__DOT__Uimm;

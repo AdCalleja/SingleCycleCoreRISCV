@@ -26,7 +26,6 @@ class SSC VL_NOT_FINAL {
     // propagate new values into/out from the Verilated model.
     VL_IN8(&original_clk,0,0);
     VL_IN8(&rst,0,0);
-    VL_IN8(&btn,0,0);
     VL_OUT8(&leds,7,0);
 
     // CELLS
