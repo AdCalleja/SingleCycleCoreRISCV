@@ -56,11 +56,16 @@ Immediate Generator
 
 ## RTL
 After having a functional simulation in Logisim the core has been ported to Verilog to load it to a FPGA.
-The [*src*](/RTL/src/) folder contains verilog source and a text file with data memory values.
-The [*constrains*](/RTL/constrains/) folder contains the file to implement the design to the boards *Alhambra-II* and *ARTY 7 100T*.
-The [*build*](/RTL/build/) folder contains a script to synth and load the bitstream to *Alhambra-II*. Also contains Verilator generated file (Not used yet).
-The [*sim*](/RTL/sim/) file contains files used to simulate the design. In this case in Vivado simulator.
-The [*doc*](/RTL/sim/readme.md) contains documentation of the RTL design.
+
+- The [*src*](/RTL/src/) folder contains verilog source and a text file with data memory values.
+
+- The [*constrains*](/RTL/constrains/) folder contains the file to implement the design to the boards *Alhambra-II* and *ARTY 7 100T*.
+
+- The [*build*](/RTL/build/) folder contains a script to synth and load the bitstream to *Alhambra-II*. Also contains Verilator generated file (Not used yet).
+
+- The [*sim*](/RTL/sim/) file contains files used to simulate the design. In this case in Vivado simulator.
+
+- The [*doc*](/RTL/sim/readme.md) contains documentation of the RTL design.
 
 ## Testing
 To test the instructions implemented and debug the design the following assembly code has been written in [Ripes](https://github.com/mortbopet/Ripes), getting also the disassembly version of the code:
