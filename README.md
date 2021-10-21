@@ -28,7 +28,7 @@ ALU
 
 ![ALU  Diagram](images/alu.jpg?raw=true "ALU Diagram")
 
-1 bit ALU Control
+1 bit ALU
 
 ![1 bit ALU Diagram](images/1bitalu.jpg?raw=true "1 bit ALU Diagram")
 
