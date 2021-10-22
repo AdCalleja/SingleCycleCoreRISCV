@@ -22,19 +22,23 @@ The instructions implemented at the moment are: *lw*, *sw*, *beq*, *add*, *sub*,
 
 Top Level
 
-![Top Level Diagram](images/topleveldiagram.jpg?raw=true "Top Level Diagram")
+![Top Level Diagram](images/topleveldiagram.png?raw=true "Top Level Diagram")
+
+Register File
+
+![Register File  Diagram](images/registerfile.png?raw=true "ALU Diagram")
 
 ALU
 
-![ALU  Diagram](images/alu.jpg?raw=true "ALU Diagram")
+![ALU  Diagram](images/alu.png?raw=true "ALU Diagram")
 
-1 bit ALU Control
+1 bit ALU
 
-![1 bit ALU Diagram](images/1bitalu.jpg?raw=true "1 bit ALU Diagram")
+![1 bit ALU Diagram](images/1bitalu.png?raw=true "1 bit ALU Diagram")
 
 Main Control
 
-![Main Control Diagram](images/maincontrol.jpg?raw=true "Main Control Diagram")
+![Main Control Diagram](images/maincontrol.png?raw=true "Main Control Diagram")
 
 ALU Control
 
@@ -48,11 +52,11 @@ ALU Control
 | R                  | and         | AND                | 1      | 0      | 0       | 1       | 1       | 1       | 0000    |
 | R                  | or          | OR                 | 1      | 0      | 0       | 1       | 1       | 0       | 0001    |
 
-![ALU Control Diagram](images/alucontrol.jpg?raw=true "ALU Control Diagram")
+![ALU Control Diagram](images/alucontrol.png?raw=true "ALU Control Diagram")
 
 Immediate Generator
 
-![Immediate Generator Diagram](images/immgen.jpg?raw=true "Immediate Generator Diagram")
+![Immediate Generator Diagram](images/immgen.png?raw=true "Immediate Generator Diagram")
 
 ## RTL
 After having a functional simulation in Logisim the core has been ported to Verilog to load it to a FPGA.
