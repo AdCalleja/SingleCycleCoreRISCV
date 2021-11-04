@@ -4,8 +4,6 @@ rm *.asc *.bin *.json
 while getopts 'D:' flag; do
     case "${flag}" in
         D) defines=${OPTARG};;
-        a) age=${OPTARG};;
-        f) fullname=${OPTARG};;
     esac
 done
 echo 'Defines  = -D${defines}=1'

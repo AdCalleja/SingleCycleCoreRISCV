@@ -4,6 +4,33 @@ This project is intended to be a simple implementation of some of the instructio
 
 ![Alt Text](images/SSC.gif)
 
+## Usage
+
+A simple bash script has been created to execute the generation of the RTL model with Yosys and NextPNR and load it to the Alhambra-II board, but it can be replicated to do it with other boards.
+[*Script*](/RTL/build/runAlhambra-ii.sh)
+
+Standard:
+~~~bash
+./RTL/build/runAlhambra-ii.sh
+~~~
+
+Button:
+Button 1 (SW1) is used as clock.
+
+*Warning: to reset, Button 2 (SW2) must be pressed before Button 1 (SW1) as reset is designed to be synchronous*
+
+~~~bash
+./RTL/build/runAlhambra-ii.sh -D Button
+~~~
+
+SlowClock:
+1 Clock Cycle per second
+
+~~~bash
+./RTL/build/runAlhambra-ii.sh -D SlowClock
+~~~
+
+
 ## Design
 
 This basic desing has been widely based in the work of [zeeshanrafique23](https://github.com/zeeshanrafique23), [RISC-V-single-cycle-core-Logisim](https://github.com/zeeshanrafique23/RISC-V-single-cycle-core-Logisim) and Chapter 4.4 of *Computer Organization and Design RISC-V Edition* as well as Appendix A.5 and Appendix C.2.

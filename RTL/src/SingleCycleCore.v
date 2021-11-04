@@ -6,6 +6,7 @@
 `include "RegisterFile.v"
 `include "TextMemory.v"
 //Debouncer
+//`define BUTTON = 1
 `ifdef BUTTON
     `include "Debouncer.v"
 `endif

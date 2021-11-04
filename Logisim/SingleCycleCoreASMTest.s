@@ -1,4 +1,4 @@
-#Logisim Tests
+#Logisim Test
 
 .text
 main:
