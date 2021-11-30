@@ -20,14 +20,14 @@ Button 1 (SW1) is used as clock.
 *Warning: to reset, Button 2 (SW2) must be pressed before Button 1 (SW1) as reset is designed to be synchronous*
 
 ~~~bash
-./RTL/build/runAlhambra-ii.sh -D Button
+./RTL/build/runAlhambra-ii.sh -D BUTTON
 ~~~
 
 SlowClock:
 1 Clock Cycle per second
 
 ~~~bash
-./RTL/build/runAlhambra-ii.sh -D SlowClock
+./RTL/build/runAlhambra-ii.sh -D SLOWCLK
 ~~~
 
 
