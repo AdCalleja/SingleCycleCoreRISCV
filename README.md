@@ -4,30 +4,42 @@ This project is intended to be a simple implementation of some of the instructio
 
 ![Alt Text](images/SSC.gif)
 
-## Usage
+## How to Use
+
+### RTL synth and load of the bitstream to Alhambra-II.
 
 A simple bash script has been created to execute the generation of the RTL model with Yosys and NextPNR and load it to the Alhambra-II board, but it can be replicated to do it with other boards.
 [*Script*](/RTL/build/runAlhambra-ii.sh)
 
-Standard:
+#### Prerequisites
+
+Having installed ([OSS CAD SUITE](https://github.com/YosysHQ/oss-cad-suite-build)
+Rules for Alhambra-II (If this is your board)
+
 ~~~bash
-./RTL/build/runAlhambra-ii.sh
+sudo sh -c "echo 'ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0660", GROUP="plugdev", TAG+="uaccess"' > /etc/udev/rules.d/53-lattice-ftdi.rules"
 ~~~
 
-Button:
+#### Standard Use:
+
+~~~bash
+./RTL/build/runAlhambra-ii.sh -I ./RTL/src/
+~~~
+
+#### Button:
 Button 1 (SW1) is used as clock.
 
 *Warning: to reset, Button 2 (SW2) must be pressed before Button 1 (SW1) as reset is designed to be synchronous*
 
 ~~~bash
-./RTL/build/runAlhambra-ii.sh -D BUTTON
+./RTL/build/runAlhambra-ii.sh -I ./RTL/src/ -D BUTTON
 ~~~
 
-SlowClock:
+#### SlowClock:
 1 Clock Cycle per second
 
 ~~~bash
-./RTL/build/runAlhambra-ii.sh -D SLOWCLK
+./RTL/build/runAlhambra-ii.sh -I ./RTL/src/ -D SLOWCLK
 ~~~
 
 

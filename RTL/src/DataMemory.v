@@ -15,7 +15,7 @@ module DataMemory #(
 
   //Initializa RAM
   initial begin
-    $readmemh("/home/adrian/codigo/RISC-V/SingleCycleCoreRISCV/RTL/src/datamemoryverilog.txt", ram);
+    $readmemh("datamemoryverilog.txt", ram);
   end
 
   always @(posedge clk) begin //WRITE
